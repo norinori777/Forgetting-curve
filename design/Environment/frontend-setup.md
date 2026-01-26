@@ -6,25 +6,25 @@
 
     ```bash
     # リポジトリ直下で実行
-    npm create vite@latest frontend -- --template react-ts
+    yarn create vite frontend --template react-ts
     cd frontend
-    npm install
+    yarn
     ```
 
 2) 開発用依存パッケージのインストール（例）
 
     ```bash
-    npm install axios @tanstack/react-query react-router-dom react-hook-form dayjs
-    npm install recharts # または chart.js/react-chartjs-2
+    yarn add axios @tanstack/react-query react-router-dom react-hook-form dayjs
+    yarn add recharts # または chart.js/react-chartjs-2
 
     # UIライブラリ（任意、好みで選択）
-    npm install @mui/material @emotion/react @emotion/styled
+    yarn add @mui/material @emotion/react @emotion/styled
     ```
 
 3) 開発支援ツール（ESLint, Prettier など）
 
     ```bash
-    npm install -D eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-import @typescript-eslint/eslint-plugin @typescript-eslint/parser
+    yarn add -D eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-import @typescript-eslint/eslint-plugin @typescript-eslint/parser
     ```
 
 4) 推奨スクリプト（`package.json` に追加）
@@ -44,9 +44,16 @@
    - フォルダ構成例: `src/pages`, `src/components`, `src/hooks`, `src/services/api`（APIクライアント）
    - 環境変数: `.env` に `VITE_API_BASE_URL`（例: <http://localhost:3000>）を設定
 
-6) 実行
+6) エラー対応
 
     ```bash
     # 開発サーバを起動
-    npm run dev
+    yarn add -D vite
+    ```
+
+7) 実行
+
+    ```bash
+    # 開発サーバを起動
+    yarn dev
     ```

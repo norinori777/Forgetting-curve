@@ -186,7 +186,7 @@
 | id | SERIAL | PRIMARY KEY | 学習項目ID |
 | title | VARCHAR(255) | NOT NULL | タイトル |
 | content | TEXT | NOT NULL | 内容 |
-| category | VARCHAR(100) | NULL | カテゴリー |
+| category_id | INTEGER | NULL, FOREIGN KEY | カテゴリーID（任意） |
 | tags | TEXT[] | NULL | タグ（配列） |
 | created_at | TIMESTAMP | NOT NULL DEFAULT CURRENT_TIMESTAMP | 作成日時 |
 | updated_at | TIMESTAMP | NOT NULL DEFAULT CURRENT_TIMESTAMP | 更新日時 |
@@ -213,7 +213,7 @@
 ### インデックス設計
 
 - learning_items.created_at にインデックス
-- learning_items.category にインデックス
+- learning_items.category_id にインデックス
 - review_history.learning_item_id にインデックス
 - review_history.next_review_date にインデックス
 
@@ -238,7 +238,7 @@ learning_items N ──> 1 categories (optional)
 {
   "title": "string",
   "content": "string",
-  "category": "string (optional)",
+  "categoryId": 1,
   "tags": ["string"] (optional)
 }
 ```
@@ -250,7 +250,7 @@ learning_items N ──> 1 categories (optional)
 学習項目一覧を取得する
 
 - クエリパラメータ
-  - category: カテゴリーフィルター
+  - categoryId: カテゴリーフィルター
   - tag: タグフィルター
   - status: 復習状態フィルター
   - search: 検索キーワード
@@ -272,7 +272,7 @@ learning_items N ──> 1 categories (optional)
 {
   "title": "string",
   "content": "string",
-  "category": "string (optional)",
+  "categoryId": 1,
   "tags": ["string"] (optional)
 }
 ```

@@ -341,6 +341,13 @@ learning_items N ──> 1 categories (optional)
 
 - PostgreSQL 14+
 
+### 状態管理
+
+- サーバ状態
+  - TanStack Query（React Query）
+- UI状態
+  - ReactのuseState / useReducer + Context
+
 ### 開発環境
 
 - ESLint + Prettier (コード品質)

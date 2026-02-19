@@ -1,0 +1,1 @@
+export { RouterLinkItem } from './presenter';

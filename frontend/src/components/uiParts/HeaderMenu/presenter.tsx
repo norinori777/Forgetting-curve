@@ -21,15 +21,16 @@ export const HeaderMenu = (props: HeaderMenuProps) => {
 
   return (
     <nav aria-label="Header menu">
-      <ul className="flex flex-row space-x-4 md:justify-around max-md:gap-2">
+      <ul className="flex w-full flex-row">
         {props.items.map((item) => {
           return (
-            <li key={item.label}>
+            <li key={item.label} className="flex-1 text-center">
               <RouterLinkItem
                 text={item.label}
                 link={item.to}
                 select={() => {}}
                 underline={false}
+                className="block w-full"
                 theme={theme}
                 size={size}
               />

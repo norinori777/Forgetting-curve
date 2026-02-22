@@ -40,6 +40,8 @@
   - items: Array<{ label: string; to: string; }>
 - 出力（見た目/挙動）
   - itemsの順番どおりにリンクを表示
+  - リンクの表示は、均等割で表示
+    - 例: `ul` を `display:flex` にし、各 `li` を `flex: 1`（同じ幅）として中央寄せする
   - クリックで react-router 経由でページ遷移
   - active表現（選択中スタイル）は「やる/やらない」を仕様で明記（未指定ならやらない）
   - propsにthemeやsizeを渡すことで、タイトル文字の色やサイズを変更できること
